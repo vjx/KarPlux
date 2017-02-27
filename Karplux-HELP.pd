@@ -1,0 +1,20 @@
+#N canvas 416 233 949 456 10;
+#X obj 276 99 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12600 1;
+#X obj 119 213 dac~;
+#X floatatom 51 95 5 0 0 0 - - -, f 5;
+#X obj 311 90 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X obj 130 158 KarSynth~;
+#X obj 276 263 s KP-Feedback;
+#X obj 307 235 s KP-Blend;
+#X obj 132 70 pack f f;
+#X obj 132 48 notein;
+#X connect 0 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 0;
+#X connect 4 0 1 1;
+#X connect 7 0 4 0;
+#X connect 8 0 2 0;
+#X connect 8 0 7 0;
+#X connect 8 1 7 1;
