@@ -8,7 +8,7 @@
 #X obj 121 347 KarSynth~;
 #X obj 746 360 s KP-Feedback;
 #X obj 777 332 s KP-Blend;
-#X obj 123 259 pack f f;
+#X obj 121 307 pack f f;
 #X obj 123 237 notein;
 #X floatatom 273 372 0 0 120 0 - - -;
 #X text 314 372 level \, dB;
@@ -37,6 +37,8 @@
 #X msg 439 119 45;
 #X msg 330 104 70;
 #X msg 364 112 90;
+#X obj 455 262 keyup;
+#X obj 123 259 mtof;
 #X connect 0 0 5 0;
 #X connect 3 0 6 0;
 #X connect 4 0 17 0;
@@ -44,7 +46,7 @@
 #X connect 4 0 1 1;
 #X connect 7 0 4 0;
 #X connect 8 0 2 0;
-#X connect 8 0 7 0;
+#X connect 8 0 36 0;
 #X connect 8 1 7 1;
 #X connect 9 0 17 1;
 #X connect 11 0 17 2;
@@ -72,3 +74,4 @@
 #X connect 32 0 29 0;
 #X connect 33 0 29 0;
 #X connect 34 0 29 0;
+#X connect 36 0 7 0;
