@@ -1,13 +1,13 @@
 #N canvas 414 77 949 611 10;
-#X obj 746 196 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 240 148 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 12100 1;
 #X obj 156 548 dac~;
 #X floatatom 42 284 5 0 0 0 - - -, f 5;
-#X obj 781 187 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 275 139 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 12700 1;
 #X obj 121 347 KarSynth~;
-#X obj 746 360 s KP-Feedback;
-#X obj 777 332 s KP-Blend;
+#X obj 240 312 s KP-Feedback;
+#X obj 271 284 s KP-Blend;
 #X obj 121 307 pack f f;
 #X obj 123 237 notein;
 #X floatatom 273 372 0 0 120 0 - - -;
@@ -19,25 +19,10 @@
 #X text 392 422 crossover frequency \, Hz.;
 #X text 438 447 HF damping \, percent;
 #X obj 230 477 rev2~ 100 90 3000 20;
-#X obj 721 111 ctlin 74;
-#X obj 721 133 / 127;
-#X obj 790 131 / 127;
-#X obj 791 109 ctlin 71;
-#X obj 315 4 f;
-#X obj 315 26 + 1;
-#X obj 302 -27 metro 500;
-#X obj 255 -32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X floatatom 394 -9 5 0 0 0 - - -, f 5;
-#X obj 337 58 mod 4;
-#X obj 337 80 sel 0 1 2 3;
-#X obj 371 139 mtof;
-#X floatatom 371 161 5 0 0 0 - - -, f 5;
-#X msg 400 113 39;
-#X msg 439 119 45;
-#X msg 330 104 70;
-#X msg 364 112 90;
-#X obj 455 262 keyup;
+#X obj 215 63 ctlin 74;
+#X obj 215 85 / 127;
+#X obj 284 83 / 127;
+#X obj 285 61 ctlin 71;
 #X obj 123 259 mtof;
 #X connect 0 0 5 0;
 #X connect 3 0 6 0;
@@ -46,7 +31,7 @@
 #X connect 4 0 1 1;
 #X connect 7 0 4 0;
 #X connect 8 0 2 0;
-#X connect 8 0 36 0;
+#X connect 8 0 22 0;
 #X connect 8 1 7 1;
 #X connect 9 0 17 1;
 #X connect 11 0 17 2;
@@ -58,20 +43,4 @@
 #X connect 19 0 0 0;
 #X connect 20 0 3 0;
 #X connect 21 0 20 0;
-#X connect 22 0 23 0;
-#X connect 23 0 22 1;
-#X connect 23 0 27 0;
-#X connect 24 0 22 0;
-#X connect 25 0 24 0;
-#X connect 26 0 24 1;
-#X connect 27 0 28 0;
-#X connect 28 0 33 0;
-#X connect 28 1 34 0;
-#X connect 28 2 31 0;
-#X connect 28 3 32 0;
-#X connect 29 0 30 0;
-#X connect 31 0 29 0;
-#X connect 32 0 29 0;
-#X connect 33 0 29 0;
-#X connect 34 0 29 0;
-#X connect 36 0 7 0;
+#X connect 22 0 7 0;
