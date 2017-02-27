@@ -1,4 +1,4 @@
-#N canvas 183 77 751 662 10;
+#N canvas 181 77 751 662 10;
 #X obj 145 149 noise~;
 #X floatatom 275 259 0 0 0 0 - - -;
 #X obj 160 259 vline~;
@@ -43,6 +43,7 @@
 #X obj 445 451 sqrt;
 #X obj 568 100 loadbang;
 #X msg 568 122 \; KP-Feedback 0.8 \; KP-Blend 1;
+#X obj 414 117 max 30;
 #X connect 0 0 11 0;
 #X connect 1 0 9 0;
 #X connect 2 0 6 1;
@@ -75,8 +76,9 @@
 #X connect 35 0 36 0;
 #X connect 37 0 35 1;
 #X connect 38 0 39 0;
-#X connect 39 0 18 0;
+#X connect 39 0 44 0;
 #X connect 39 1 34 0;
 #X connect 40 0 41 0;
 #X connect 41 0 13 0;
 #X connect 42 0 43 0;
+#X connect 44 0 18 0;
